@@ -17,7 +17,15 @@ export default merge(commonConfig, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: '[name].prod.css',
     }),
   ],
+  output: {
+    filename: '[name].prod.js',
+  },
+  /*plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
+  ],*/
 });
