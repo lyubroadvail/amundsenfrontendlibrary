@@ -34,7 +34,7 @@ if os.getenv('APP_WRAPPER') and os.getenv('APP_WRAPPER_CLASS'):
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.getenv('STATIC_ROOT', 'static')
 static_dir = os.path.join(PROJECT_ROOT, STATIC_ROOT)
-
+logging.info('USING STATIC DIRECTORY AT {}'.format(static_dir))
 
 def create_app(config_module_class: str, template_folder: str = None) -> Flask:
     """ Support for importing arguments for a subclass of flask.Flask """
